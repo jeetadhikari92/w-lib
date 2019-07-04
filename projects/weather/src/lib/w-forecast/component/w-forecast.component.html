@@ -1,0 +1,16 @@
+<div class="forecast-item-container">
+  <div><span>{{forecast.time}}</span></div>
+  <div><span>{{forecast.date}}</span></div>
+  <div class="forecast-item-wind">
+    <span>
+      <img src="assets/weather/wind.png" alt=""> {{forecast.wind}}mps
+    </span>
+  </div>
+  <div class="forecast-item-weather">
+    <img [src]="forecast.iconUrl" alt=""><span>{{forecast.weather}}</span>
+  </div>
+  <div class="forecast-item-temperature">
+    <span>{{forecast.temperature}}</span>
+    <img src="assets/weather/centegrade.svg">
+  </div>
+</div>

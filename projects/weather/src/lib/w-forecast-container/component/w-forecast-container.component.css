@@ -1,0 +1,20 @@
+.main {
+    text-align: center
+}
+
+.flex-container {
+    display: flex;
+}
+  
+lib-w-forecast {
+    margin: 1rem;
+}
+
+.lib-w-forecast-container {
+    display: flex; 
+    margin: auto;
+}
+
+.forecast-item-list-container {
+    overflow-x: auto;
+}

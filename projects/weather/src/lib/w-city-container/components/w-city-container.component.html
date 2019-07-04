@@ -1,0 +1,3 @@
+<section class="flex-container" [ngStyle]="{'flex-direction': vertical ? 'column' : 'row'}">
+  <lib-w-city *ngFor="let city of cityList" [city]="city"></lib-w-city>
+</section>

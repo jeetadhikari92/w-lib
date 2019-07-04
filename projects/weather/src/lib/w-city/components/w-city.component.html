@@ -1,0 +1,16 @@
+<div *ngIf="weatherData$ | async as data" class="city-item-container" [ngClass]="{'selected': selected}">
+  <h3>{{data.cityName}}</h3>
+  <div><span>{{data.countryCode}}</span></div>
+  <div>
+    <span class="city-item-wind">
+      <img src="assets/weather/wind.png" alt="">   {{data.wind}}mps
+    </span>
+  </div>
+  <div class="city-item-weather">
+    <img [src]="data.icon" alt=""> <span>{{data.weather}}</span>
+  </div>
+  <div class="city-item-temperature">
+    <span>{{data.temperature}}</span>
+    <img src="assets/weather/centegrade.svg">
+  </div>
+</div>

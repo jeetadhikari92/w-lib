@@ -1,0 +1,46 @@
+<!-- ----------------Testing City Widget---------------- -->
+
+<h3>Weather Library Testing</h3>
+
+<h5>Using lib-w-city</h5>
+
+<div style="display: flex">
+    <lib-w-city [city]="'Paris'"></lib-w-city>
+    <lib-w-city [city]="city1"></lib-w-city>
+</div>
+<hr>
+
+<!-- ----------------Testing City Container Widget ---------------- -->
+
+<h5>Using lib-w-city-container</h5>
+
+<div style="display: flex">
+    <lib-w-city-container
+        [cities]="citiesList"
+        style="margin: auto">
+    </lib-w-city-container>    
+</div>
+<hr>
+
+<!-- ----------------Testing Forecast Widget ---------------- -->
+
+<h5>Using lib-w-forecast</h5>
+
+<div style="display: flex">
+   <lib-w-forecast [forecast]="forecast1"></lib-w-forecast>
+   <lib-w-forecast [forecast]="forecast2"></lib-w-forecast>
+</div>
+<hr>
+
+<!-- ----------------Testing Forecast Container Widget ---------------- -->
+
+<h5>Using lib-w-forecast-container</h5>
+<div style="display: flex">
+    <lib-w-forecast-container style="width: 100%" 
+    [city]="'Bangalore'" [limit]="8"></lib-w-forecast-container>
+ </div>
+<div style="display: flex">
+   <lib-w-forecast-container style="width: 100%" 
+   [city]="'Paris'" [limit]="5"></lib-w-forecast-container>
+</div>
+<hr>

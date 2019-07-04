@@ -1,0 +1,39 @@
+.forecast-item-container {
+    width: 8rem;
+    text-align: center;
+    padding: 1rem 0rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #ffffff6e;
+    box-shadow: 1px 1px 3px;
+  }
+  
+  .forecast-item-wind span {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .forecast-item-wind span img {
+    width: 2rem;
+  }
+  
+  .forecast-item-weather {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .forecast-item-weather img {
+    width: 5rem;
+    margin: -15px 0;
+  }
+  
+  .forecast-item-temperature span {
+    font-size: 2rem;
+    font-weight: 100
+  }
+  
+  .forecast-item-temperature img {
+    width: 1.5rem;
+  }
+  
