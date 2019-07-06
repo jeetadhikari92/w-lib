@@ -1,5 +1,5 @@
 export interface Weather {
-    cityName?: string;
+    city?: string;
     countryCode?: string
     wind?: number
     weather?: string;

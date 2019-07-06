@@ -1,4 +1,4 @@
-export interface CurrentWeather {
+export interface WeatherResponse {
     coord: Coordinates;
     weather: Weather[];
     base: string;

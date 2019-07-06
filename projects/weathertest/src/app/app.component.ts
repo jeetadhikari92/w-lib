@@ -12,7 +12,8 @@ export class AppComponent {
   citiesList = [
     'London',
     'amsterdam',
-    'bangalore'
+    'bangalore',
+    'delhi'
   ]
 
   forecast1 = {

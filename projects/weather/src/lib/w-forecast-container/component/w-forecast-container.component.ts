@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ForecastService } from '../services/forecast.service';
 import { Forecast } from '../../w-forecast/types/forecast.interface';
 import { Observable } from 'rxjs';
+import { ForecastService } from '../../w-sdk/services/forecast.service';
+import { ForecastDataService } from '../service/forecast-data.service';
 
 @Component({
   selector: 'lib-w-forecast-container',
@@ -16,11 +17,11 @@ export class WForecastContainerComponent implements OnInit {
   public forecastList$: Observable<Forecast>;
   
   constructor(
-    private readonly forecastService: ForecastService
+    private readonly forecastData: ForecastDataService
   ) { }
 
   ngOnInit() {
-    this.forecastList$ = this.forecastService.getForecast(this.city);
+    this.forecastList$ = this.forecastData.getForecast(this.city);
   }
 
 }

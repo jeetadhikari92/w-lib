@@ -1,11 +1,11 @@
-import { CurrentWeather } from '../../w-city/types/current-weather.response';
+import { WeatherResponse, Coordinates } from './weather.response';
 
 export interface ForecaseResponse {
     city?: City;
     cod?: number;
     message?: number;
     cnt?: number;
-    list?: CurrentWeather[];
+    list?: WeatherResponse[];
 }
 
 export interface City {
@@ -13,8 +13,5 @@ export interface City {
     name: string;
     country: string;
     timazone: number;
-    coord: {
-        lat: number;
-        long: number;
-    }
+    coord: Coordinates;
 }

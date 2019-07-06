@@ -1,5 +1,5 @@
 <div *ngIf="weatherData$ | async as data" class="city-item-container" [ngClass]="{'selected': selected}">
-  <h3>{{data.cityName}}</h3>
+  <h3>{{data.city}}</h3>
   <div><span>{{data.countryCode}}</span></div>
   <div>
     <span class="city-item-wind">

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CurrentWeatherService } from '../services/current-weather.service';
 import { Observable } from 'rxjs';
 import { Weather } from '../types/weather.interface';
+import { WeatherDataService } from '../service/weather-data.service';
 
 @Component({
   selector: 'lib-w-city',
@@ -16,7 +16,7 @@ export class WCityComponent implements OnInit {
   weatherData$: Observable<Weather>;
 
   constructor(
-    private currentWeather: CurrentWeatherService
+    private weatherData: WeatherDataService
   ) {}
 
   /**
@@ -25,7 +25,7 @@ export class WCityComponent implements OnInit {
    */
   ngOnInit() {
     const city = this.city ? this.city : 'Amsterdam';
-    this.weatherData$ = this.currentWeather.getWeather(city);
+    this.weatherData$ = this.weatherData.getWeather(city);
   }
 
 }
