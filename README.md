@@ -66,6 +66,6 @@ This library comes with some assets which are not included in the library and ha
 - Paste the same folder inside your application ```src/assets``` folder as shown below.
 
 <p align="left">
-    <img src="projects/weathertest/src/assets/extras/assets-folders.png" width="200" height="200">
+    <img src="projects/weathertest/src/assets/extras/assets-folder.PNG">
 </p>
 
