@@ -5,7 +5,7 @@
 </p>
 
 
-Collection of Weater widgets and services to easily build weather application in one hour.
+Collection of Weather widgets and services to easily build weather application in minutes.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -95,26 +95,26 @@ export class AppModule { }
 ```
 
 ##### Add the selector lib-w-city
-After the module is registered you can use the WCity widget selector in your component template and pass a city name
+- After the module is registered you can use the WCity widget selector in your component template and pass a city name
 like this
 ```
 <lib-w-city [city]="'Paris'"></lib-w-city>
 ```
 
-<p align="center">
-    <img src="projects/weathertest/src/assets/extras/WCity/sample1.PNG">
+<p align="left">
+    <img src="projects/weathertest/src/assets/extras/WCity/sample1.PNG" width="300" height="200"> 
 </p>
 
-We can also pass a selected boolean value to display if the particular city is selected.
+- We can also pass a selected boolean value to display if the particular city is selected.
 ```
 <lib-w-city [city]="'Amsterdam'" [selected]="true"></lib-w-city>
 ```
 
-<p align="center">
-    <img src="projects/weathertest/src/assets/extras/WCity/sample2.PNG">
+<p align="left">
+    <img src="projects/weathertest/src/assets/extras/WCity/sample2.PNG"  width="300" height="200">
 </p>
 
-We can also write proper styles to change the look of the widgets for example
+- We can also write proper styles to change the look of the widgets for example
 ```
 <lib-w-city 
     style="background: #2ec7c0; color: white; border-radius: 5px"
@@ -122,6 +122,6 @@ We can also write proper styles to change the look of the widgets for example
 </lib-w-city>
 ```
 
-<p align="center">
-    <img src="projects/weathertest/src/assets/extras/WCity/sample3.PNG">
+<p align="left">
+    <img src="projects/weathertest/src/assets/extras/WCity/sample3.PNG"  width="300" height="230">
 </p>
