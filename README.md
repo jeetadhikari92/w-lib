@@ -1,4 +1,9 @@
-# @storm-pkg/weather 
+# @storm-pkg/weather
+
+<p align="center">
+    <img src="https://cdn.clipart.email/ba9dc386cba68417080b80c8a225f904_friday-forecast-potential-for-wet-weather-high-76-local-_400-400.jpeg" width="72" height="72">
+</p>
+
 
 Collection of Weater widgets and services to easily build weather application in one hour.
 
@@ -57,6 +62,7 @@ It will also take care of error handling.
 ##### Add Assets to your application :
 
 This library comes with some assets which are not included in the library and has to be included manually.
-    * Go to the assets folder inside the weathertest folder and copy the weather folder which contains the assets.
-    * Paste the same folder inside your application assets folder.
-    * This will give access to the required access to the library.
+- Go to the assets folder inside the weathertest folder and copy the weather folder which contains the assets.
+- Paste the same folder inside your application assets folder.
+- This will give access to the required access to the library.
+
