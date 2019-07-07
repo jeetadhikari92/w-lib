@@ -62,7 +62,7 @@ It will also take care of error handling.
 ##### Add Assets to your application :
 
 This library comes with some assets which are not included in the library and has to be included manually.
-- Go to the assets folder inside the weathertest folder and copy the weather folder which contains the assets.
-- Paste the same folder inside your application assets folder.
+- Go to the ```projects/weathertest/assets``` and copy the ```weather``` folder which contains the assets.
+- Paste the same folder inside your application ```src/assets``` folder.
 - This will give access to the required access to the library.
 
