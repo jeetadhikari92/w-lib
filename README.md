@@ -5,7 +5,7 @@
 </p>
 
 
-Collection of Weather widgets and services to easily build weather application in one hour.
+Collection of Weather widgets and services to easily build weather application in minutes.
 
 ## Table of Contents
 * [Installation](#installation)
