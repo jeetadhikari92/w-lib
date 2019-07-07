@@ -28,7 +28,7 @@ export class WeatherService {
      */
     getWeather(city: string): Observable<WeatherResponse> {
         const params = new HttpParams().append('q', city);
-        return this.http.get('weather', {params: params}).pipe(
+        return this.http.get('@w/weather', {params: params}).pipe(
             tap((resp: WeatherResponse) => {
                 this.store.setDeep('cities', city, resp);
             })

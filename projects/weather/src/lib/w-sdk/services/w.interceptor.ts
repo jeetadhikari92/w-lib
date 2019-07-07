@@ -24,16 +24,20 @@ export class WeatherInterceptor implements HttpInterceptor {
      * @param next 
      */
     intercept(req: HttpRequest<any>, next: HttpHandler) {
-        const newUrl = URLs.HOST + req.url;
-        let params = req.params.append('appid', '1092af71c0819d6f24d1b178827d1ac4');
-        params = params.append('units', 'metric');
-        const clone = req.clone({
-            url: newUrl,
-            params: params
-        });
-        return next.handle(clone).pipe(
-            catchError(this.handleError) 
-        );
+        const prefix = req.url.split('/')[0];
+        if(prefix === '@w') {
+            const newUrl = URLs.HOST + req.url.substr(3);
+            let params = req.params.append('appid', '1092af71c0819d6f24d1b178827d1ac4');
+            params = params.append('units', 'metric');
+            const clone = req.clone({
+                url: newUrl,
+                params: params
+            });
+            return next.handle(clone).pipe(
+                catchError(this.handleError) 
+            );
+        }
+        return next.handle(req);
     }
 
     /**
