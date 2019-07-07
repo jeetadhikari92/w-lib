@@ -1,7 +1,7 @@
 # @storm-pkg/weather
 
 <p align="center">
-    <img src="https://cdn.clipart.email/ba9dc386cba68417080b80c8a225f904_friday-forecast-potential-for-wet-weather-high-76-local-_400-400.jpeg" width="72" height="72">
+    <img src="https://cdn.clipart.email/ba9dc386cba68417080b80c8a225f904_friday-forecast-potential-for-wet-weather-high-76-local-_400-400.jpeg" width="200" height="200">
 </p>
 
 
