@@ -12,7 +12,6 @@ export class WCityComponent implements OnInit {
 
   @Input() city: string;
   @Input() selected: boolean;
-  iconUrl: string;
   weatherData$: Observable<Weather>;
 
   constructor(
@@ -20,8 +19,9 @@ export class WCityComponent implements OnInit {
   ) {}
 
   /**
-   * @description Constructing the icon url for each city, when components
-   * are initialized.
+   * @description Setting Amsterdam as default city if not passed from outside. 
+   * And then fetching the mapped Weather data from the store for that city.
+   * @return void; 
    */
   ngOnInit() {
     const city = this.city ? this.city : 'Amsterdam';

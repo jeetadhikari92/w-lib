@@ -16,7 +16,12 @@ export class WCityContainerComponent implements OnInit {
     this.refreshCities(this.cities);
   }
 
-  refreshCities(cities: string[]) {
+  /**
+   * @description This function will validate if the number of cities passed for
+   * the weather container is less than 5. And render the UI if it satisfies.
+   * @param cities
+   */
+  refreshCities(cities: string[]): void {
     if(cities.length > 5) {
       console.error('Maximum cities allowed is 5.');
     } else { 

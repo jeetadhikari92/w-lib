@@ -1,11 +1,15 @@
+/**
+ * ForecastService is used to connect with external backend data
+ */
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
-import { tap, map } from 'rxjs/operators';
-import { ForecaseResponse } from '../types/forecast.response';
-import { Forecast, ForecastWeather } from '../../w-forecast';
 import { WeatherResponse } from '../types/weather.response';
 import { Store } from '../store/store.service';
+import { ForecastResponse } from '../types/forecast.response';
 
 @Injectable({
     providedIn: 'root'
@@ -17,11 +21,17 @@ export class ForecastService {
         private readonly store: Store
     ) {}
 
-    getForecast(city: string) {
+    /**
+     * @description This function will fetch forecast data of a particular city
+     * and store them in a central store using the Store service.
+     * @param city
+     * @returns Observable<ForecastResponse>
+     */
+    getForecast(city: string): Observable<ForecastResponse> {
         let params = new HttpParams().append('q', city);
         params = params.append('cnt', '8');
         return this.http.get('forecast', {params: params}).pipe(
-            tap((resp: WeatherResponse) => this.store.set('forecast', resp))
+            tap((resp: WeatherResponse) => this.store.setDeep('forecast', city, resp))
         );
     }
 }

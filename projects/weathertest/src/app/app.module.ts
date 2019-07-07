@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { 
   WCityModule, 
@@ -25,7 +25,8 @@ import { AppComponent } from './app.component';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: WeatherInterceptor,
-      multi: true
+      multi: true,
+      deps: [HttpClient]
     }
   ],
   bootstrap: [AppComponent]

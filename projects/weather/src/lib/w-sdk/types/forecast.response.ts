@@ -1,6 +1,6 @@
 import { WeatherResponse, Coordinates } from './weather.response';
 
-export interface ForecaseResponse {
+export interface ForecastResponse {
     city?: City;
     cod?: number;
     message?: number;

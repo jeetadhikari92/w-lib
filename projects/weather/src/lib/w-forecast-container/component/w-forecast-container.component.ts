@@ -20,6 +20,10 @@ export class WForecastContainerComponent implements OnInit {
     private readonly forecastData: ForecastDataService
   ) { }
 
+  /**
+   * @description Fetching the mapped data from the store to render upon
+   * initializaton
+   */
   ngOnInit() {
     this.forecastList$ = this.forecastData.getForecast(this.city);
   }

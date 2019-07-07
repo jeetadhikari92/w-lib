@@ -1,10 +1,16 @@
+/**
+ * Weather data service fetches data from the central data store
+ * of this library. It maps the data according to the need of modules
+ */
+
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map, take } from 'rxjs/operators';
+
 import { Store } from '../../w-sdk/store/store.service';
-import { pluck, map, ignoreElements, filter, take } from 'rxjs/operators';
+import { URLs, WeatherService } from '../../w-sdk';
 import { WeatherResponse } from '../../w-sdk/types/weather.response';
 import { Weather } from '../types/weather.interface';
-import { URLs, WeatherService } from '../../w-sdk';
-import { Observable } from 'rxjs';
-import { Injectable } from '@angular/core';
 
 @Injectable({
     providedIn: 'root'
@@ -15,7 +21,13 @@ export class WeatherDataService {
         private readonly store: Store,
         private readonly weatherService: WeatherService
     ) {}
-
+    
+    /**
+     * @description This function will initialize the http call for
+     * a certain city. At the same time it returns the mapped weather details.
+     * @param city
+     * @returns Observable<Weather> 
+     */
     getWeather(city: string): Observable<Weather> {
         this.weatherService.getWeather(city).pipe(take(1)).subscribe();
         return this.store.select('cities', city).pipe(
