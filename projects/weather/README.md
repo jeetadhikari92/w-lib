@@ -1,24 +1,127 @@
-# Weather
+# @storm-pkg/weather
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+<p align="left">
+    <img src="projects/weathertest/src/assets/extras/w.png" width="200" height="200">
+</p>
 
-## Code scaffolding
 
-Run `ng generate component component-name --project weather` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project weather`.
-> Note: Don't forget to add `--project weather` or else it will be added to the default project in your `angular.json` file. 
+Collection of Weater widgets and services to easily build weather application in one hour.
 
-## Build
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Develop](#development)
 
-Run `ng build weather` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+## Installation
 
-After building your library with `ng build weather`, go to the dist folder `cd dist/weather` and run `npm publish`.
+First you need to install the npm module:
 
-## Running unit tests
+```sh
+npm install @storm-pkg/weather
+```
 
-Run `ng test weather` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Choose the version corresponding to your Angular version:
 
-## Further help
+ Angular     | @storm-pkg/weather
+ ----------- | ------------------- 
+ 7           | 1.0.0             
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Usage
+
+#### 1. Provide the `WeatherIntercepter`:
+
+Finally, you can use @storm-pkg/weather in your Angular project. You have to import `WeatherIntercepter` in the root NgModule of your application as shown below.
+
+```ts
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import {WeatherInterceptor} from '@storm-pkg/weather';
+
+@NgModule({
+    imports: [
+        BrowserModule
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: WeatherInterceptor,
+            multi: true,
+            deps: [HttpClient]
+        }
+    ]
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+This will handle all the Weather related apis centrally and add the Application Id to each apis.
+It will also take care of error handling.
+
+##### Add Assets to your application :
+
+This library comes with some assets which are not included in the library and has to be included manually.
+- Go to the ```projects/weathertest/assets``` and copy the ```weather``` folder which contains the assets.
+- Paste the same folder inside your application ```src/assets``` folder as shown below.
+
+<p align="center">
+    <img src="projects/weathertest/src/assets/extras/assets-folder.PNG">
+</p>
+
+
+## Development
+
+#### 1. Using the WCity:
+
+This module allows you to render a single Weather widget for a city.
+
+##### Import the module in your NgModule
+To use the WCityWidget you need to import the WCityodule. Do as follows:
+
+```ts
+import {WCityModule} from '@storm-pkg/weather';
+
+@NgModule({
+    ...
+    imports: [
+        ...
+        WCityModule
+    ],
+    ...
+})
+export class AppModule { }
+```
+
+##### Add the selector lib-w-city
+After the module is registered you can use the WCity widget selector in your component template and pass a city name
+like this
+```
+<lib-w-city [city]="'Paris'"></lib-w-city>
+```
+
+<p align="center">
+    <img src="projects/weathertest/src/assets/extras/WCity/sample1.PNG">
+</p>
+
+We can also pass a selected boolean value to display if the particular city is selected.
+```
+<lib-w-city [city]="'Amsterdam'" [selected]="true"></lib-w-city>
+```
+
+<p align="center">
+    <img src="projects/weathertest/src/assets/extras/WCity/sample2.PNG">
+</p>
+
+We can also write proper styles to change the look of the widgets for example
+```
+<lib-w-city 
+    style="background: #2ec7c0; color: white; border-radius: 5px"
+    [city]="'Paris'">
+</lib-w-city>
+```
+
+<p align="center">
+    <img src="projects/weathertest/src/assets/extras/WCity/sample3.PNG">
+</p>
