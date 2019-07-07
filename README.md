@@ -1,7 +1,7 @@
 # @storm-pkg/weather
 
 <p align="left">
-    <img src="projects/weathertest/src/assets/weather/w.jpeg.png" width="200" height="200">
+    <img src="projects/weathertest/src/assets/extras/w.png" width="200" height="200">
 </p>
 
 
@@ -63,6 +63,9 @@ It will also take care of error handling.
 
 This library comes with some assets which are not included in the library and has to be included manually.
 - Go to the ```projects/weathertest/assets``` and copy the ```weather``` folder which contains the assets.
-- Paste the same folder inside your application ```src/assets``` folder.
-- This will give access to the required access to the library.
+- Paste the same folder inside your application ```src/assets``` folder as shown below.
+
+<p align="left">
+    <img src="projects/weathertest/src/assets/extras/assets-folders.png" width="200" height="200">
+</p>
 
