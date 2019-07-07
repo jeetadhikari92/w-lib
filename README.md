@@ -1,7 +1,7 @@
 # @storm-pkg/weather
 
 <p align="left">
-    <img src="projects/weathertest/src/assets/weather/centegrade.svg" width="200" height="200">
+    <img src="projects/weathertest/src/assets/weather/w.jpeg.png" width="200" height="200">
 </p>
 
 
