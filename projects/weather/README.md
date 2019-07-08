@@ -1,7 +1,7 @@
 # @storm-pkg/weather
 
 <p align="left">
-    <img src="projects/weathertest/src/assets/extras/w.png" width="200" height="200">
+    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/w.png" width="200" height="200">
 </p>
 
 
@@ -67,7 +67,7 @@ This library comes with some assets which are not included in the library and ha
 - Paste the same folder inside your application ```src/assets``` folder as shown below.
 
 <p align="center">
-    <img src="projects/weathertest/src/assets/extras/assets-folder.PNG">
+    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/assets-folder.PNG">
 </p>
 
 
@@ -102,7 +102,7 @@ like this
 ```
 
 <p align="left">
-    <img src="projects/weathertest/src/assets/extras/WCity/sample1.PNG" width="300" height="200"> 
+    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/WCity/sample1.PNG" width="300" height="200"> 
 </p>
 
 - We can also pass a selected boolean value to display if the particular city is selected.
@@ -111,7 +111,7 @@ like this
 ```
 
 <p align="left">
-    <img src="projects/weathertest/src/assets/extras/WCity/sample2.PNG"  width="300" height="200">
+    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/WCity/sample2.PNG"  width="300" height="200">
 </p>
 
 - We can also write proper styles to change the look of the widgets for example
@@ -123,5 +123,5 @@ like this
 ```
 
 <p align="left">
-    <img src="projects/weathertest/src/assets/extras/WCity/sample3.PNG"  width="300" height="230">
+    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/WCity/sample3.PNG"  width="300" height="230">
 </p>
