@@ -25,7 +25,7 @@ Choose the version corresponding to your Angular version:
 
  Angular     | @storm-pkg/weather
  ----------- | ------------------- 
- 7           | 1.0.0             
+ 7           | 1.0.5            
 
 
 ## Usage
