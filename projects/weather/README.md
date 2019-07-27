@@ -24,11 +24,17 @@ Choose the version corresponding to your Angular version:
 
  Angular     | @storm-pkg/weather
  ----------- | ------------------- 
- 8           | 1.0.9  
- 7           | 1.0.9         
+ 8           | 1.0.10
+ 7           | 1.0.10        
 
 
 ## Usage
+
+#### 0. Get a free OpenWeather Api key
+
+Signup by clicking the link and get a free API key which is required
+to run this library. 
+https://home.openweathermap.org/users/sign_up
 
 #### 1. Provide the `WeatherIntercepter`:
 
