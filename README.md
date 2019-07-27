@@ -1,9 +1,8 @@
 # @storm-pkg/weather
 
 <p align="left">
-    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/w.png" width="200" height="200">
+    <img src="https://raw.githubusercontent.com/jeetadhikari92/w-lib/master/projects/docs/assets/w.png" width="200" height="200">
 </p>
-
 
 Collection of Weather widgets and services to easily build weather application in minutes.
 
@@ -25,51 +24,38 @@ Choose the version corresponding to your Angular version:
 
  Angular     | @storm-pkg/weather
  ----------- | ------------------- 
- 7           | 1.0.5            
+ 8           | 1.0.9  
+ 7           | 1.0.9         
 
 
 ## Usage
 
 #### 1. Provide the `WeatherIntercepter`:
 
-Finally, you can use @storm-pkg/weather in your Angular project. You have to import `WeatherIntercepter` in the root NgModule of your application as shown below.
+Finally, you can use @storm-pkg/weather in your Angular project. You have to import `WeatherModule` in the root NgModule of your application as shown below and enter your
+configuration.
 
 ```ts
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
-import {WeatherInterceptor} from '@storm-pkg/weather';
+import {WeatherModule} from '@storm-pkg/weather';
 
 @NgModule({
     imports: [
-        BrowserModule
+        BrowserModule,
+        WeatherModule.withConfig({
+            appId: <Your App Id from Open Weather APIs>,
+            unit: <Your choice of unit. metric or imperial>
+        })
     ],
-    providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: WeatherInterceptor,
-            multi: true,
-            deps: [HttpClient]
-        }
-    ]
     bootstrap: [AppComponent]
 })
 export class AppModule { }
 ```
 
-This will handle all the Weather related apis centrally and add the Application Id to each apis.
+This will handle all the Weather related apis centrally and add the Application Id that you provide to each apis.
 It will also take care of error handling.
-
-##### Add Assets to your application :
-
-This library comes with some assets which are not included in the library and has to be included manually.
-- Go to the ```projects/weathertest/assets``` and copy the ```weather``` folder which contains the assets.
-- Paste the same folder inside your application ```src/assets``` folder as shown below.
-
-<p align="center">
-    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/assets-folder.PNG">
-</p>
-
 
 ## Development
 
@@ -102,7 +88,7 @@ like this
 ```
 
 <p align="left">
-    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/WCity/sample1.PNG" width="300" height="200"> 
+    <img src="https://raw.githubusercontent.com/jeetadhikari92/w-lib/master/projects/docs/assets/WCity/sample1.PNG" width="300" height="200"> 
 </p>
 
 - We can also pass a selected boolean value to display if the particular city is selected.
@@ -111,7 +97,7 @@ like this
 ```
 
 <p align="left">
-    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/WCity/sample2.PNG"  width="300" height="200">
+    <img src="https://raw.githubusercontent.com/jeetadhikari92/w-lib/master/projects/docs/assets/WCity/sample2.PNG"  width="300" height="200">
 </p>
 
 - We can also write proper styles to change the look of the widgets for example
@@ -123,5 +109,5 @@ like this
 ```
 
 <p align="left">
-    <img src="https://github.com/jeetadhikari92/w-lib/blob/master/projects/docs/assets/WCity/sample3.PNG"  width="300" height="230">
+    <img src="https://raw.githubusercontent.com/jeetadhikari92/w-lib/master/projects/docs/assets/WCity/sample3.PNG"  width="300" height="230">
 </p>

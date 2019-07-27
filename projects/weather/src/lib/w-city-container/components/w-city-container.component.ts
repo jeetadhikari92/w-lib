@@ -1,16 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'lib-w-city-container',
-  templateUrl: './w-city-container.component.html',
-  styleUrls: ['./w-city-container.component.css']
+  selector: "lib-w-city-container",
+  templateUrl: "./w-city-container.component.html",
+  styleUrls: ["./w-city-container.component.css"]
 })
 export class WCityContainerComponent implements OnInit {
-
   @Input() cities: string[];
-  @Input() vertical: boolean; 
+  @Input() vertical: boolean;
   public cityList: string[];
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.refreshCities(this.cities);
@@ -22,11 +21,10 @@ export class WCityContainerComponent implements OnInit {
    * @param cities
    */
   refreshCities(cities: string[]): void {
-    if(cities.length > 5) {
-      console.error('Maximum cities allowed is 5.');
-    } else { 
+    if (cities.length > 5) {
+      console.error("Maximum cities allowed is 5.");
+    } else {
       this.cityList = [...cities];
     }
   }
-
 }

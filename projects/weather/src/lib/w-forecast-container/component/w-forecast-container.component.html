@@ -1,10 +1,10 @@
 <div class="main" *ngIf="forecastList$ | async as forecast">
   <h1>{{forecast.city}}, {{forecast.country}}</h1>
   <h4>Next few hours forecast</h4>
- 
+
   <section class="flex-container forecast-item-list-container"
     [ngStyle]="{'flex-direction': vertical ? 'column' : 'row'}">
-   
+
     <div class="lib-w-forecast-container">
       <lib-w-forecast *ngFor="let forecast of forecast.list | slice:0:limit" [forecast]="forecast">
       </lib-w-forecast>

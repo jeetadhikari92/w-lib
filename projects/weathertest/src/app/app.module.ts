@@ -9,6 +9,7 @@ import {
   WeatherInterceptor
 } from 'weather';
 import { AppComponent } from './app.component';
+import { WeatherModule } from 'projects/weather/src/lib/weather.module';
 
 @NgModule({
   declarations: [
@@ -16,18 +17,16 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    WeatherModule.withConfig({
+      appId: '1092af71c0819d6f24d1b178827d1ac4',
+      unit: 'metric'
+    }),
     WCityModule,
     WCityContainerModule,
     WForecastModule,
     WForecastContainerModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: WeatherInterceptor,
-      multi: true,
-      deps: [HttpClient]
-    }
   ],
   bootstrap: [AppComponent]
 })

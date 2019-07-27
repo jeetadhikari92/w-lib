@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WCityContainerComponent } from './w-city-container.component';
+import { WCityContainerComponent } from "./w-city-container.component";
 
-describe('WCityContainerComponent', () => {
+describe("WCityContainerComponent", () => {
   let component: WCityContainerComponent;
   let fixture: ComponentFixture<WCityContainerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WCityContainerComponent ]
-    })
-    .compileComponents();
+      declarations: [WCityContainerComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('WCityContainerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

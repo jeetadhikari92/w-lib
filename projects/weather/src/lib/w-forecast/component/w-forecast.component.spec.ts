@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WForecastComponent } from './w-forecast.component';
+import { WForecastComponent } from "./w-forecast.component";
 
-describe('WForecastComponent', () => {
+describe("WForecastComponent", () => {
   let component: WForecastComponent;
   let fixture: ComponentFixture<WForecastComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WForecastComponent ]
-    })
-    .compileComponents();
+      declarations: [WForecastComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('WForecastComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
