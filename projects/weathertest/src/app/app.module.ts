@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { 
+  WeatherModule,
   WCityModule, 
   WCityContainerModule, 
   WForecastModule,
@@ -9,7 +10,6 @@ import {
   WeatherInterceptor
 } from 'weather';
 import { AppComponent } from './app.component';
-import { WeatherModule } from 'projects/weather/src/lib/weather.module';
 
 @NgModule({
   declarations: [
